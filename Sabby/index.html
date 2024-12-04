@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabby News</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="homePage.css">
+    <link rel="stylesheet" href="komsan.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="logo">
+                <img src="https://news.sabay.com.kh/img/logo.png" alt="">
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="menu">
+            <ul>
+                <li><a href="#" id="home"><i class="fa-solid fa-house"></i></a></li>
+                <li><a href="#" id="កម្សាន្ត">កម្សាន្ត</a></li>
+                <li><a href="#" id="បច្ចេកវិទ្យា">បច្ចេកវិទ្យា</a></li>
+                <li><a href="#" id="ជីវិតនិងសង្គម">
+                    ជីវិតនិងសង្គម
+                </a></li>
+                <li><a href="#" id="កីឡា">កីឡា</a></li>
+                <li><a href="#" id="Auto_Talk">Auto Talk</a></li>
+                <li><a href="#" id="Starting_Up">Starting Up</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section>
+        Hello
+    </section>
+    <footer class="container-fluid mt-5 p-5">
+        <div class="footer container">
+            <div class="row">
+                <div class="col-12 col-xl-3">
+                    <div class="app">
+                        <h5 class="text-start">Sabby News</h5>
+                        <img width="100px" src="https://news.sabay.com.kh/img/logo.png" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-xl-3">
+                    <div class="link">
+                        <h5 class="text-start">FOLLOW US</h5>
+                        <ul>
+                            <li><a href=""><i class="bi bi-facebook me-1"></i> FaceBook</a></li>
+                            <li><a href=""><i class="bi bi-instagram me-1"></i> Instagram</a></li>
+                            <li><a href=""><i class="bi bi-tiktok me-1"></i>Tik Tok</a></li>
+                            <li><a href=""><i class="bi bi-youtube me-1"></i> YouTube</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-xl-3">
+                    
+                    <div class="link">
+                        <h5>CUSTOMER SERVICES</h5>
+                        <ul>
+                            <li><a href=""><i class="bi bi-question-circle me-1"></i>Online exchange policy</a></li>
+                            <li><a href=""><i class="bi bi-shield-shaded me-1"></i>Privacy Policy</a></li>
+                            <li><a href=""><i class="bi bi-whatsapp me-1"></i>FAQs & guides</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-xl-3">
+                    <div class="accept">
+                        <h5>WE ACCEPT</h5>
+                        <img width="190px" src="https://zandokh.com/image/catalog/logo/web-footer/We-accept-payment%E2%80%93for-web-footer-1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer> 
+    
+</body>
+</html>
+
+<script>
+    $(document).ready(function(){
+        function Ajax(url){
+            $.ajax({
+                url:url,
+                cache:false,
+                success:function(respone){
+                    const res=`${respone}`;
+                    $('section').html(res);
+                }
+            });
+        }
+        Ajax('homePage.html');
+        $('#home').click(function(){
+            Ajax('homePage.html')
+        })
+        $('#កម្សាន្ត').click(function(){
+            Ajax('កម្សាន្ត.html')
+        })
+        $('#បច្ចេកវិទ្យា').click(function(){
+            Ajax('social.html')
+        })
+        $('#ជីវិតនិងសង្គម').click(function(){
+
+        })
+        $('#កីឡា').click(function(){
+
+        })
+        $('#Auto_Talk').click(function(){
+
+        })
+        $('#Starting_Up').click(function(){
+
+        })
+    })
+</script>
+
+
+
